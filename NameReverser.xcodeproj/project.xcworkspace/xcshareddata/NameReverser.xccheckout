@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>68BF4577-C160-4DBA-A9E9-5CD8D4C437E9</string>
+	<key>IDESourceControlProjectName</key>
+	<string>NameReverser</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>04C1886ABC20530F43520FAFB14C4643553073EE</key>
+		<string>https://github.com/robbystoned/NameReverserSwift.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>NameReverser.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>04C1886ABC20530F43520FAFB14C4643553073EE</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/robbystoned/NameReverserSwift.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>04C1886ABC20530F43520FAFB14C4643553073EE</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>04C1886ABC20530F43520FAFB14C4643553073EE</string>
+			<key>IDESourceControlWCCName</key>
+			<string>NameReverserSwift</string>
+		</dict>
+	</array>
+</dict>
+</plist>
