@@ -33,11 +33,18 @@ class AppDelegate: NSObject, NSApplicationDelegate {
             var filename:String = chosenfile.lastPathComponent;
             var lastPeriod = filename.lastIndexOf(".");
             var name = filename.subString(0, length: lastPeriod);
+            var lastSlash = chosenfile.path.lastIndexOf("/");
+            var directory = chosenfile.path.subString(0, length: lastSlash)
             var fileExtension = filename.subString(lastPeriod, length: (filename.length - lastPeriod));
             
-            println("FileName: " + filename);
-            println("name: " + name);
-            println("file extension: " + fileExtension);
+            
+            println(directory + "/" + reverseFileName(name) + fileExtension);
+            if(fileExtension == ".mkv") {
+                let fileManager = NSFileManager.defaultManager();
+              
+                //fileManager.moveItemAtPath(chosenfile.path, toPath: directory + "/" + reverseFileName(name) + fileExtension, error: nil);
+                println("renamed");
+            }
 
             
         } else {

@@ -4,9 +4,8 @@
 //
 //  Created by Robert vd Steen on 11-08-14.
 //  Copyright (c) 2014 Robert vd Steen. All rights reserved.
+// thanks to https://gist.github.com/albertbori
 //
-
-import Foundation
 
 import Foundation
 
