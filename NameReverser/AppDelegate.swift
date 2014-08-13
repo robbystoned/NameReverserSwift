@@ -52,6 +52,10 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         }
     }
     
+    @IBAction func StartRename(AnyObject) {
+    
+    }
+    
     func reverseFileName(fileName:String) -> String{
         var strArray:[Character] = [Character]()
         
