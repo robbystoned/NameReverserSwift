@@ -12,7 +12,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
                             
     @IBOutlet var window: NSWindow!
     @IBOutlet var textField: NSTextField!
-
+ var myFiledialog:NSOpenPanel = NSOpenPanel()
     func applicationDidFinishLaunching(aNotification: NSNotification?) {
         // Insert code here to initialize your application
         textField.editable = false;
@@ -23,35 +23,37 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     }
     
     @IBAction func selectFile(AnyObject){
-        var myFiledialog:NSOpenPanel = NSOpenPanel()
+       
         myFiledialog.allowsMultipleSelection = false
         myFiledialog.canChooseDirectories = false
         myFiledialog.runModal()
+        var chosenfile = myFiledialog.URL
+        textField.stringValue = chosenfile!.path!
+
+    }
+    
+    @IBAction func StartRename(AnyObject) {
         var chosenfile = myFiledialog.URL // holds path to selected file, if there is one
         if((chosenfile) != nil){
-            textField.stringValue = chosenfile.path;
-            var filename:String = chosenfile.lastPathComponent;
+           
+            var filename:String = chosenfile!.lastPathComponent!;
             var lastPeriod = filename.lastIndexOf(".");
             var name = filename.subString(0, length: lastPeriod);
-            var lastSlash = chosenfile.path?.lastIndexOf("/");
-            var directory = chosenfile.path?.subString(0, length: lastSlash!)
+            var lastSlash = chosenfile?.path?.lastIndexOf("/");
+            var directory = chosenfile?.path!.subString(0, length: lastSlash!)
             var fileExtension = filename.subString(lastPeriod, length: (filename.length - lastPeriod));
             println(directory! + "/" + reverseFileName(name) + fileExtension);
             if(fileExtension == ".mkv") {
                 let fileManager = NSFileManager.defaultManager();
-              
-                //fileManager.moveItemAtPath(chosenfile.path, toPath: directory + "/" + reverseFileName(name) + fileExtension, error: nil);
+                
+                fileManager.moveItemAtPath(chosenfile!.path!, toPath: directory! + "/" + reverseFileName(name) + fileExtension, error: nil);
                 println("renamed");
             }
-
+            
             
         } else {
             NSLog("no file selected");
         }
-    }
-    
-    @IBAction func StartRename(AnyObject) {
-    
     }
     
     func reverseFileName(fileName:String) -> String{
